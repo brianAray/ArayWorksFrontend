@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 import { Link } from 'react-router-dom';
-import {motion} from 'framer-motion';
 
 const NavbarButtonComponent = (props: any) => {
   return (
@@ -9,7 +9,7 @@ const NavbarButtonComponent = (props: any) => {
         whileHover={{scale: 1.1}}
         whileTap={{scale: 0.9}}
     >
-        <Link className={props.className} to={props.to} onClick={props.onClick}>{props.text}</Link>
+        <Link style={{background: "grey", color: "white"}} className={props.className} to={props.to} onClick={props.onClick}>{props.text}</Link>
     </motion.div>
     </>
   )

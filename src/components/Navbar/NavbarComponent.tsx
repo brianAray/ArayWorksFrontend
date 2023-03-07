@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
 import NavbarButtonComponent from './NavbarButtonComponent';
 
 const variants = {
-  open: { opacity: 1, y: "-30%" },
+  open: { opacity: 1, y: "-40%" },
   closed: { opacity: 0, y: "-100%" },
 }
 
@@ -30,7 +29,7 @@ const NavbarComponent = () => {
     setButtonData([...buttonDataCopy]);
   }
 
-  let navbarButtons = buttonData.map((data: any) => (<NavbarButtonComponent key={data.text} {...data} />))
+  let navbarButtons = buttonData.map((data: any) => (<NavbarButtonComponent key={data.text} {...data} isHovering={isOpen} />))
 
   return (
     <>
@@ -42,7 +41,11 @@ const NavbarComponent = () => {
             {navbarButtons}
       </motion.div> */}
       <div
-        style={{ width: "100%", height: "50%" }}
+        style={
+          !isOpen? 
+            {transition: "0.2s", marginLeft: "10%", marginRight: "10%", height: "20%"}:
+            {transition: "0.2s", marginLeft: "10%", marginRight: "10%", height: "20%", background: "silver"}}
+        
         className="fixed-bottom"
         onMouseOver={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
