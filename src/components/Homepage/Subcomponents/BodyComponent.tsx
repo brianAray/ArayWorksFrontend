@@ -7,7 +7,7 @@ const BodyComponent = () => {
         <div className="container text-center">
             <div className="row">
                 <div className="col">
-                    <ImageComponent url={"https://arayworksimages.s3.us-east-2.amazonaws.com/Face.jpg"}/>
+                    <ImageComponent url={"https://www.shutterstock.com/image-photo/close-portrait-smiling-handsome-man-260nw-1011569245.jpg"}/>
                 </div>
             </div>
             <div className='row'>

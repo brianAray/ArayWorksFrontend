@@ -8,7 +8,7 @@ const HomepageComponent = () => {
       <div className="row">
         <div className="col"></div>
         <div className="col">
-          <MainTitleComponent title={"Aray Works"} />
+          <MainTitleComponent title={"Page Title"} />
         </div>
         <div className="col"></div>
       </div>
